@@ -64,7 +64,8 @@ npm install
 
 # Step 4: Start the development server with auto-reloading.
 npm run dev
-
+```
+---
 🗂️ Editing or Contributing
 Editing directly on GitHub
 
@@ -81,6 +82,8 @@ Go to your repository
 Click Code → Codespaces → New Codespace
 
 Edit and commit inside the cloud environment
+
+---
 
 🗄️ Database Structure (Supabase)
 
@@ -109,6 +112,8 @@ email	TEXT	Must be valid email
 telefono	TEXT	Required
 carrera_id	UUID	References carreras.id
 created_at	Timestamp	Auto-generated
+
+---
 ✔️ Status
 
 The project is fully functional and connected to Supabase.
