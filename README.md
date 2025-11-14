@@ -85,33 +85,41 @@ Edit and commit inside the cloud environment
 
 ---
 
-🗄️ Database Structure (Supabase)
+## 🗄️ Database Structure (Supabase)
 
-Two main tables are used:
+Two main tables are used in this project:
 
-carreras
+---
+
+### **`carreras`**
 
 Stores the available academic programs.
 
-Column	Type	Notes
-id	UUID	Primary key
-nombre	TEXT	Required
-codigo	TEXT	Optional
-activa	BOOLEAN	Only active careers shown
-created_at	Timestamp	Auto-generated
-preinscripciones
+| Column      | Type      | Notes                        |
+|-------------|-----------|------------------------------|
+| `id`        | UUID      | Primary key                  |
+| `nombre`    | TEXT      | Required                     |
+| `codigo`    | TEXT      | Optional                     |
+| `activa`    | BOOLEAN   | Only active careers shown    |
+| `created_at`| Timestamp | Auto-generated               |
+
+---
+
+### **`preinscripciones`**
 
 Stores all submitted pre-enrollment forms.
 
-Column	Type	Notes
-id	UUID	Primary key
-nombre	TEXT	Required
-apellido	TEXT	Required
-dni	TEXT	Digits only
-email	TEXT	Must be valid email
-telefono	TEXT	Required
-carrera_id	UUID	References carreras.id
-created_at	Timestamp	Auto-generated
+| Column       | Type      | Notes                            |
+|--------------|-----------|----------------------------------|
+| `id`         | UUID      | Primary key                      |
+| `nombre`     | TEXT      | Required                         |
+| `apellido`   | TEXT      | Required                         |
+| `dni`        | TEXT      | Digits only                      |
+| `email`      | TEXT      | Must be a valid email            |
+| `telefono`   | TEXT      | Required                         |
+| `carrera_id` | UUID      | References `carreras.id`         |
+| `created_at` | Timestamp | Auto-generated                   |
+
 
 ---
 ✔️ Status
